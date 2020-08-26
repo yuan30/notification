@@ -19,7 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".notificationJobService"
+
+        <activity
+            android:name=".handlers.BigTextMainActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_big_text_main"
+            android:taskAffinity=""/>
+
+        <service
+            android:name=".handlers.BigTextIntentService"
+            android:exported="false"/>
+
+        <service android:name=".NotificationJobService"
             android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
